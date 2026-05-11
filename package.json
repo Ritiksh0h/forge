@@ -1,0 +1,17 @@
+{
+  "name": "forge",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace=@forge/api",
+    "dev:web": "npm run dev --workspace=@forge/web",
+    "build:engine": "npm run build --workspace=@forge/engine",
+    "test:engine": "npm run test --workspace=@forge/engine",
+    "db:migrate": "npm run db:migrate --workspace=@forge/api",
+    "db:seed": "npm run db:seed --workspace=@forge/api",
+    "db:seed:large": "npm run db:seed:large --workspace=@forge/api"
+  }
+}

@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: forge-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: forge
+      POSTGRES_PASSWORD: forge
+      POSTGRES_DB: forge
+    ports:
+      - "5432:5432"
+    volumes:
+      - forge_data:/var/lib/postgresql/data
+
+volumes:
+  forge_data:
