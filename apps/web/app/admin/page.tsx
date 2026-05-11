@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function StatCard({ label, value, sub, icon: Icon, color = "var(--primary)" }: {
   label: string; value: string | number; sub?: string;
-  icon: React.ComponentType<{ className?: string }>; color?: string;
+  icon: React.ComponentType<{ className?: string; style?: React.CSSProperties }>; color?: string;
 }) {
   return (
     <div className="bg-[var(--card)] rounded-2xl p-5 border border-[var(--border)] hover:border-[var(--primary)]/20 transition-colors">
